@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h4>Enter stock to be added to the watchlist</h4>
+  <form action="{% url 'addwatchlist' %}">
+      {% csrf_token %}
+      <br>
+      <br>
+       <table
+            border="1"
+            cellpadding="25"
+            cellspacing="5">
+          <tr>
+              <td><input type="submit" value="Delete Card" formaction="{% url 'deletewatchlist' %}"></td>
+          </tr>
+      </table>
+  </form>
+   {{ str }}
+   {{ str2 }}
+   {{ str3 }}
+   {{ table }}
+  </body>
+</html>

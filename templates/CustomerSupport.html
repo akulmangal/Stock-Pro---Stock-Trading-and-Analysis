@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StockPro | Contact</title>
+    <script src="https://kit.fontawesome.com/f79dc7947f.js" crossorigin="anonymous"></script>
+      <style>
+              @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+              html,body {
+                  height: 100%;
+                  background: rgb(4,12,119);
+                  background: linear-gradient(270deg, rgba(4,12,119,1) 24%, rgba(9,4,78,1) 56%);
+                  font-family: Montserrat;
+             }
+              .topnav {
+                  overflow: hidden;
+                  font-family: 'Montserrat', sans-serif;
+                  border-radius: 10px;
+                  float: right;
+                  padding-top: 35px;
+              }
+              .topnav a {
+                  float: right;
+                  color: #ffffff;
+                  text-align: center;
+                  padding: 15px 20px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  border-radius: 10px;
+                  margin-right: 5px;
+                  font-weight: 550;
+                  margin-bottom: 10px;
+              }
+
+              .topnav a:hover {
+                background-color: #3C589C;
+                /background-color: rgb(90, 90, 90);/
+                color: white;
+                border-radius: 10px;
+              }
+              h2,h3,h4,h5 {
+                  font-family: 'Montserrat', sans-serif;
+                  padding: 0px;
+                  margin: 0px;
+              }
+              h2{
+                  font-size: 32px;
+              }
+              h3{
+                  font-size: 24px;
+              }
+              h4{
+                  font-size: 18.72px;
+              }
+              h5{
+                  font-size: 16px;
+                  color: #a0a0a0;
+              }
+              p{
+                  font-family: 'Lato', sans-serif;
+              }
+              table,td,th{
+                  border: 1px #f2f2f2;
+                  text-align: left;
+                  font-family: 'Lato', sans-serif;
+                  padding: 5px;
+              }
+              table{
+                  width: 25%;
+              }
+              tbody>tr>:nth-child(1),th{
+                  font-family: 'Montserrat', sans-serif;
+                  /*background: #f2f2f2;
+                  text-align: left;*/
+              }
+            .buttons {
+                height: 40px;
+                background-color: white;
+                border-color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 800;
+                cursor: pointer;
+                margin:0px;
+                border-style: solid;
+                border-bottom-color: darkgrey;
+                border-bottom-width: 3px;
+                display: block;
+                width: 200px;
+            }
+            .buttons:hover {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .buttons:active {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .tabs{
+                width: 100%;
+            }
+            .Content {
+                width: 97.5%;
+                padding: 15px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: white;
+                border-radius: 10px;
+                border-color: rgba(4,12,119,0);
+                align-items: center;
+                min-height: 450px;
+                float: right;
+          }
+          h1 {
+                position: absolute;
+                font-size: 50px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                padding-top: 0px;
+                margin-top: 10px;
+          }
+          img {
+                height: 195px;
+                width: 200px;
+                margin-right: 20px;
+          }
+          .entry {
+              margin-left: 225px;
+              margin-top: 10px;
+              padding-left: 20px;
+              width: 1000px;
+          }
+          .OP{
+              display: block;
+
+              background-color: white;
+              width: 70%;
+          }
+          .NAV{
+              float: left;
+              background-color: #e9e9e9;
+              margin-left: 10px;
+              border-style: solid;
+              border-width: 2px;
+              border-color: black;
+              border-radius: 10px;
+              min-height: 250px;
+              min-width: 200px;
+              margin-top: 10px;
+              text-align: center;
+          }
+          .topnav2 {
+              font-family: 'Montserrat', sans-serif;
+              border-radius: 10px;
+              float: left;
+              padding-top: 35px;
+              text-align:start;
+          }
+          .topnav2 a {
+              float: left;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 20px;
+              text-decoration: none;
+              font-size: 20px;
+              border-radius: 10px;
+              margin-right: 5px;
+              margin-bottom: 10px;
+              font-weight: 550;
+          }
+
+          .topnav2 a:hover {
+              background-color: #3C589C;
+              /background-color: rgb(90, 90, 90);/
+              color: white;
+              border-radius: 10px;
+          }
+
+          .topnav2 a:active {
+              background-color: #3C589C;
+              text-decoration: underline;
+          }
+
+          input[type=submit] {
+              margin-bottom: 10px;
+              width: 150px;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 15px;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 20px;
+              padding: 10px;
+              border-style: solid;
+              background-color: white;
+              border-color: black;
+              font-weight: 800;
+              cursor: pointer;
+          }
+          input[type=submit]:hover {
+              background-color:rgb(4,12,119);
+              color:white;
+          }
+
+          .dbms-home {
+              margin-bottom: 10px;
+              width: 150px;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 15px;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 20px;
+              padding: 10px;
+              border-style: solid;
+              background-color: white;
+              border-color: black;
+              font-weight: 800;
+              text-decoration:none;
+              color: black;
+          }
+
+          .dbms-home:hover {
+              background-color:rgb(4,12,119);
+              color:white;
+          }
+
+          select {
+              margin-bottom: 10px;
+              width: 175px;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 15px;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 10px;
+              padding: 10px;
+              border-style: solid;
+              background-color: white;
+              border-color: black;
+              font-weight: 800;
+              text-decoration:none;
+              color: black;
+          }
+
+          label {
+              font-size: 20px;
+          }
+      </style>
+  </head>
+  <body>
+      </section>
+      <h1 style = "float:left;"><i class="fas fa-layer-group"></i> StockPro</h1>
+      <br>
+      <br>
+      <br>
+      <section class="navigation2">
+          <div class="topnav2">
+              <a href="{% url 'dbmshome' %}">Home</a>
+              <a href="{% url 'home' %}">Analysis</a>
+              <a href="{% url 'CustomerSupport' %}">Contact</a>
+          </div>
+      </section>
+
+      <section class="navigation">
+          <div class="topnav">
+              <a href="{% url 'signin' %}">Sign Out</a>
+          </div>
+      <div class="Content">
+          <div class="NAV">
+              <form action="{% url "csdetails" %}">
+                  <label for="City">Choose a city</label>
+                  <br><br>
+                  <select name="City" id="City">
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Pune">Pune</option>
+                      <option value="Kolkata">Kolkata</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                      <option value="Ahmedabad">Ahmedabad</option>
+                      <option value="Chennai">Chennai</option>
+                  </select>
+                  <br><br>
+                  <input type="submit" value="Get Details">
+              </form>
+          </div>
+          <div class="entry">
+              <h3>Customer Support</h3><hr>
+              <h3>{{ City }}</h3>
+              <h5>{{ Gmail }}</h5>
+              <br>
+              <section id="details"></section>
+          <p><a href="{% url 'dbmshome' %}" class="dbms-home">Go to Home Page</a></p>
+          <br>
+          </div>
+      </div>
+      </section>
+</body>
+<script>
+    var address = {{ Address|safe|default:"[]" }};
+    var text = '';
+    text += '<h4>{{ address }}</h4>'
+    var i;
+    for (i = 0; i < address.length; i++) {
+          text += '<p>' + address[i] + '</p>';
+    }
+    var phNo = {{ Phone|safe|default:"[]" }};
+    text += '<br><h4>{{ phone }}</h4>'
+    for (i = 0; i < phNo.length; i++) {
+          text += '<p>' + phNo[i] + '</p>';
+    }
+    text +='</div>'
+    document.getElementById("details").innerHTML = text;
+</script>
+</html>

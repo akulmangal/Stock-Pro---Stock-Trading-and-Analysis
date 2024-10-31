@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ Company }} | Analysis</title>
+      <script src="https://kit.fontawesome.com/f79dc7947f.js" crossorigin="anonymous"></script>
+      <style>
+              @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+              html,
+          body {
+              height: 100%;
+              background: rgb(4,12,119);
+              background: linear-gradient(270deg, rgba(4,12,119,1) 24%, rgba(9,4,78,1) 56%);
+              font-family: Montserrat;
+              /*color:white;*/
+          }
+              h2,h3,h4,h5 {
+                  font-family: 'Montserrat', sans-serif;
+                  padding: 0px;
+                  margin: 0px;
+              }
+              h2{
+                  font-size: 32px;
+              }
+              h3{
+                  font-size: 24px;
+              }
+              h4{
+                  font-size: 18.72px;
+              }
+              h5{
+                  font-size: 16px;
+                  color: #a0a0a0;
+              }
+              p{
+                  font-family: 'Lato', sans-serif;
+              }
+              table,td,th{
+                  border: 1px #f2f2f2;
+                  text-align: left;
+                  font-family: 'Lato', sans-serif;
+                  padding: 5px;
+              }
+              table{
+                  width: 25%;
+              }
+              tbody>tr>:nth-child(1),th{
+                  font-family: 'Montserrat', sans-serif;
+                  /*background: #f2f2f2;
+                  text-align: left;*/
+              }
+              .tooltip {
+                  position: relative;
+                  display: inline-block;
+                  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+            }
+
+            /* Tooltip text */
+            .tooltip .tooltiptext {
+              visibility: hidden;
+              width: 360px;
+              background-color: rgb(4,12,119);
+              color: #fff;
+              text-align: center;
+              padding: 10px 5px;
+              border-radius: 6px;
+                font-size: 12px;
+                font-family: 'Montserrat', sans-serif;
+
+              /* Position the tooltip text */
+              position: absolute;
+              z-index: 1;
+              bottom: 125%;
+              left: 50%;
+              margin-left: -60px;
+
+              /* Fade in tooltip */
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+
+            /* Tooltip arrow */
+            .tooltip .tooltiptext::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 16.66%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: rgb(4,12,119) transparent transparent transparent;
+            }
+
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltip:hover .tooltiptext {
+              visibility: visible;
+              opacity: 1;
+            }
+            .buttons {
+                height: 40px;
+                background-color: white;
+                border-color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 800;
+                cursor: pointer;
+                margin:0px;
+                border-style: solid;
+                border-bottom-color: darkgrey;
+                border-bottom-width: 3px;
+            }
+            .buttons:hover {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .buttons:active {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .tabs{
+                width: 100%;
+            }
+            .Content {
+                width: 97.5%;
+                padding: 15px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: white;
+                border-radius: 10px;
+                border-color: rgba(4,12,119,0);
+                align-items: center;
+                min-height: 450px;
+                float: right;
+          }
+          h1 {
+                position: absolute;
+                font-size: 50px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                padding-top: 0px;
+                margin-top: 10px;
+          }
+          img {
+                height: 175px;
+                width: 175px;
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                border-radius: 10px;
+          }
+          .company-name {
+                padding:50px;
+          }
+              .topnav {
+                  overflow: hidden;
+                  font-family: 'Montserrat', sans-serif;
+                  border-radius: 10px;
+                  float: right;
+                  padding-top: 35px;
+              }
+              .topnav a {
+                  float: right;
+                  color: #ffffff;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  border-radius: 10px;
+                  margin-right: 5px;
+                  font-weight: 550;
+              }
+
+              .topnav a:hover {
+                  background-color: #3C589C;
+              /background-color: rgb(90, 90, 90);/
+              color: white;
+                  border-radius: 10px;
+              }
+
+
+              .topnav2 {
+                  font-family: 'Montserrat', sans-serif;
+                  border-radius: 10px;
+                  float: left;
+                  padding-top: 35px;
+                  text-align:start;
+              }
+              .topnav2 a {
+                  float: left;
+                  color: #ffffff;
+                  text-align: center;
+                  padding: 16px 16px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  border-radius: 10px;
+                  margin-right: 5px;
+                  font-weight: 550;
+              }
+
+              .topnav2 a:hover {
+                  background-color: #3C589C;
+              /background-color: rgb(90, 90, 90);/
+              color: white;
+                  border-radius: 10px;
+              }
+
+              .topnav2 a:active {
+                  background-color: #3C589C;
+                  text-decoration: underline;
+              }
+      </style>
+  </head>
+  <body>
+  <h1 style = "float:left;"><i class="fas fa-layer-group"></i> StockPro</h1>
+  <br>
+  <br>
+  <br>
+  <section class="navigation2">
+      <div class="topnav2">
+          <a href="{% url 'dbmshome' %}">Home</a>
+          <a href="{% url 'home' %}">Analysis</a>
+          <a href="{% url 'CustomerSupport' %}">Contact</a>
+      </div>
+  </section>
+  <section class="navigation">
+      <div class="topnav">
+          <a href="{% url 'signin' %}">Sign Out</a>
+      </div>
+  </section>
+    <div class = "Content">
+       <img src={{ image }} alt="Company_logo" align = "left">
+       <div class="company-name">
+        <h3>{{Company}}</h3>
+        <h2><b>₹{{ lp }}</b><span id="up"> {{ growth }} {{ percentage }} {{ arrow }}</span></h2>
+        <h5>market status: {{ ms }}</h5>
+       </div>
+        <hr>
+  <form action="{% url 'information' %}">
+      {% csrf_token %}
+       <div class="tabs">
+           <input type="submit" value="Summary" class="buttons" formaction="{% url 'summary' %}">
+           <input type="submit" value="Candlestick Chart" class="buttons" formaction="{% url 'candlesticks' %}">
+           <input type="submit" value="Moving Averages" class="buttons" formaction="{% url 'fiveavg' %}">
+           <input type="submit" value="Income Statement" class="buttons" formaction="{% url 'incomestatement' %}">
+           <input type="submit" value="Balance Sheet" class="buttons" formaction="{% url 'balance_sheet' %}">
+           <input type="submit" value="Cash Flow" class="buttons" formaction="{% url 'cash_flow' %}">
+           <input type="submit" value="Historical Data" class="buttons" formaction="{% url 'historical' %}">
+           <input type="submit" value="Predict Future Price" class="buttons" formaction="{% url 'predict' %}">
+       </div>
+  </form>
+  <br>
+<p><b style="font-family: 'Montserrat', sans-serif">Company information</b> <br> {{company_info}}</p>
+  <table>
+      <tr>
+          <td>
+            <b>Sector </b>
+          </td>
+          <td>{{ Sector }}</td>
+      </tr>
+      <tr>
+          <td>
+            <b>P/E Ratio </b>
+            <div class="tooltip">&#x1F6C8
+            <span class="tooltiptext">The price-to-earnings ratio shows how much investors are willing to pay per rupee of earnings. For example: If a company has a P/E of 20, it means that an investor is willing to pay 20 rupees for 1 rupee of earnings</span>
+            </div>
+          </td>
+          <td>{{ PE }}</td>
+      </tr>
+      <tr>
+          <td>
+            <b>P/S Ratio </b>
+            <div class="tooltip">&#x1F6C8
+            <span class="tooltiptext">The price-to-sales ratio indicates how much an investor is paying for 1 rupee of the company's sales</span>
+            </div>
+          </td>
+          <td>{{ PS }}</td>
+      </tr>
+      <tr>
+          <td>
+            <b>P/BV Ratio </b>
+            <div class="tooltip">&#x1F6C8
+            <span class="tooltiptext">The Price to Book value ratio indicates how much an investor is paying for 1 rupee of the company's assets, which is mentioned in the balance sheet.</span>
+            </div>
+          </td>
+          <td>{{ PBV }}</td>
+      </tr>
+      <tr>
+          <td>
+            <b>PEG Ratio </b>
+            <div class="tooltip">&#x1F6C8
+            <span class="tooltiptext">PEG ratio is the ratio between the PE ratio and its growth. This helps to identify companies which have a high PE but also have a high growth</span>
+            </div>
+          </td>
+          <td>{{ PEG }}</td>
+      </tr>
+      <tr>
+          <td>
+            <b>Confidence Score </b>
+            <div class="tooltip">&#x1F6C8
+            <span class="tooltiptext">The confidence score is a proprietary score generated which takes P/E, P/S, P/BV and the business growth into consideration. A high confidence score indicates that investors are offering higher price reflecting their confidence on the company's future performance</span>
+            </div>
+          </td>
+          <td>{{ Prediction }}%</td>
+      </tr>
+  </table>
+    </div>
+  <br>
+  <script>
+      var colorThreshold = "{{ growth }}";
+      spanText = document.querySelector('span');
+      function changeColor(val) {
+          var color;
+          if (val > 0) {
+              color = "green";
+          }
+          else if (val < 0){
+              color = "red";
+          }
+          else {
+              color="grey";
+          }
+          spanText.style.color = color;
+      }
+      changeColor(colorThreshold);
+  </script>
+  </body>
+</html>

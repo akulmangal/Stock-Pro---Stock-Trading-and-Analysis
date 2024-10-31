@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StockPro | Buy Shares</title>
+      <script src="https://kit.fontawesome.com/f79dc7947f.js" crossorigin="anonymous"></script>
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+          html,body {
+              height: 100%;
+              background: rgb(4,12,119);
+              background: linear-gradient(270deg, rgba(4,12,119,1) 24%, rgba(9,4,78,1) 56%);
+              font-family: Montserrat;
+          }
+          h1 {
+              position: absolute;
+              font-size: 50px;
+              color: white;
+              font-family: 'Montserrat', sans-serif;
+              padding-top: 0px;
+              margin-top: 10px;
+          }
+
+          h2,h4 {
+              font-family: 'Montserrat', sans-serif;
+              padding: 0px;
+              margin: 0px;
+          }
+          h2{
+              font-size: 32px;
+          }
+
+          h4{
+              font-size: 18.72px;
+          }
+
+          .Content {
+              width: 97.5%;
+              padding: 15px;
+              font-family: 'Montserrat', sans-serif;
+              background-color: white;
+              border-radius: 10px;
+              border-color: rgba(4,12,119,0);
+              align-items: center;
+              min-height: 450px;
+              float: right;
+              text-align: center;
+          }
+          .topnav {
+              overflow: hidden;
+              font-family: 'Montserrat', sans-serif;
+              border-radius: 10px;
+              float: right;
+              padding-top: 35px;
+          }
+          .topnav a {
+              float: right;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 20px;
+              text-decoration: none;
+              font-size: 20px;
+              border-radius: 10px;
+              margin-right: 5px;
+              font-weight: 550;
+              margin-bottom: 10px;
+          }
+
+          .topnav a:hover {
+              background-color: #3C589C;
+              color: white;
+              border-radius: 10px;
+          }
+          .topnav2 {
+              font-family: 'Montserrat', sans-serif;
+              border-radius: 10px;
+              float: left;
+              padding-top: 35px;
+              text-align:start;
+          }
+          .topnav2 a {
+              float: left;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 20px;
+              text-decoration: none;
+              font-size: 20px;
+              border-radius: 10px;
+              margin-right: 5px;
+              margin-bottom: 10px;
+              font-weight: 550;
+          }
+
+          .topnav2 a:hover {
+              background-color: #3C589C;
+              color: white;
+              border-radius: 10px;
+          }
+
+          .topnav2 a:active {
+              background-color: #3C589C;
+              text-decoration: underline;
+          }
+
+          input[type=text] {
+              margin-bottom: 10px;
+              font-family: 'Lato', sans-serif;
+              font-size: 15px;
+              width: 55%;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 10px;
+              padding: 10px;
+          }
+          label {
+              font-family: 'Lato', sans-serif;
+              font-size: 15px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              width: 35%;
+              display: block;
+              float: left;
+              text-align: left;
+          }
+          input[type=date] {
+              margin-bottom: 10px;
+              font-family: 'Lato', sans-serif;
+              font-size: 15px;
+              width: 75%;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 10px;
+              padding: 10px;
+          }
+
+          input [type=radio] {
+              padding: 10px;
+              text-align: center;
+          }
+
+          input[type=submit] {
+              margin-bottom: 10px;
+              width: 150px;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 15px;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 20px;
+              padding: 10px;
+              border-style: solid;
+              background-color: white;
+              border-color: black;
+              font-weight: 800;
+              cursor: pointer;
+          }
+          input[type=submit]:hover {
+              background-color:rgb(4,12,119);
+              color:white;
+          }
+
+          .dbms-home {
+              margin-bottom: 10px;
+              width: 150px;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 15px;
+              border-color: gray;
+              border-width: 1px;
+              border-radius: 20px;
+              padding: 10px;
+              border-style: solid;
+              background-color: white;
+              border-color: black;
+              font-weight: 800;
+              text-decoration:none;
+              color: black;
+          }
+
+          .dbms-home:hover {
+              background-color:rgb(4,12,119);
+              color:white;
+          }
+
+          span {
+              color:gray;
+              font-size: 14px;
+          }
+      </style>
+  </head>
+  <body>
+      <h1 style = "float:left;"><i class="fas fa-layer-group"></i> StockPro</h1>
+      <br>
+      <br>
+      <br>
+      <section class="navigation2">
+          <div class="topnav2">
+              <a href="{% url 'dbmshome' %}">Home</a>
+              <a href="{% url 'home' %}">Analysis</a>
+              <a href="{% url 'CustomerSupport' %}">Contact</a>
+          </div>
+      </section>
+      <section class="navigation">
+          <div class="topnav">
+              <a href="{% url 'signin' %}">Sign Out</a>
+          </div>
+      </section>
+      <div class="Content">
+          <h2 style="font-size: 36px;text-align: center">Buy Shares</h2>
+          <form action="{% url "buytransaction" %}">
+              {% csrf_token %}
+              <p><span>Note: This site works only for stocks listed on NSE.
+                  <a href="https://www1.nseindia.com/live_market/dynaContent/live_watch/equities_stock_watch.htm">To see stock codes click here</a></span>
+              </p>
+              <hr>
+              <h3 align="left">Stock Details</h3>
+              <span> Note: Enter '.NS' after the stock code Eg: - SOTL --> SOTL.NS</span>
+              <label>Enter stock</label>
+              <input type="text" name="stock" required>
+              <label>Units</label>
+              <input type="text" name="units" required>
+              <hr>
+              <h3 align="left">Card Details</h3>
+              <label>Name on the Card</label>
+              <input type="text" name="name" required>
+              <label>Card No </label>
+              <input type="text" name="cardno" required>
+              <label>Expiry month</label>
+              <input type="text" name="em" required>
+              <label>Expiry Year</label>
+              <input type="text" name="ey" required>
+              <label>Provider</label>
+              <input type="text" name="provider" required>
+              <br>
+              <input type="submit" style="width: 250px;margin-top: 15px;" value="Make Transaction" formaction="{% url "buytransaction" %}">
+          </form>
+          {{ Confirm }}
+          <p style="float:left;"><a href="{% url 'dbmshome' %}" class="dbms-home">Go to Home Page</a></p>
+          <p style="float:right;"><a href="{% url 'home' %}" class="dbms-home">For Analysis of a Stock</a></p>
+      </div>
+      <br>
+  </body>
+</html>

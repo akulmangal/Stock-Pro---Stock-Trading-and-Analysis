@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h4>Enter stock to be added to the watchlist</h4>
+  <form action="{% url 'payment' %}">
+      {% csrf_token %}
+      <input type="text" name="Cardno">
+      <input type="text" name="Name">
+      <input type="text" name="em">
+      <input type="text" name="ey">
+      <input type="text" name="Provider">
+      <br>
+      <br>
+      <input type="submit" value="Proceed for Payment">
+  </form>
+  </body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StockPro | Home</title>
+      <script src="https://kit.fontawesome.com/f79dc7947f.js" crossorigin="anonymous"></script>
+      <style>
+              @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+              html,body {
+                  height: 100%;
+                  background: rgb(4,12,119);
+                  background: linear-gradient(270deg, rgba(4,12,119,1) 24%, rgba(9,4,78,1) 56%);
+                  font-family: Montserrat;
+             }
+              .topnav {
+                  overflow: hidden;
+                  font-family: 'Montserrat', sans-serif;
+                  border-radius: 10px;
+                  float: right;
+                  padding-top: 35px;
+              }
+              .topnav a {
+              float: left;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 20px;
+              text-decoration: none;
+              font-size: 20px;
+              border-radius: 10px;
+              margin-right: 5px;
+              font-weight: 550;
+              margin-bottom: 10px;
+          }
+
+          .topnav a:hover {
+              background-color: #3C589C;
+          / background-color: rgb(90, 90, 90);
+          / color: white;
+              border-radius: 10px;
+          }
+              h2,h3,h4,h5 {
+                  font-family: 'Montserrat', sans-serif;
+                  padding: 0px;
+                  margin: 0px;
+              }
+              h2{
+                  font-size: 32px;
+              }
+              h3{
+                  font-size: 24px;
+              }
+              h4{
+                  font-size: 18.72px;
+              }
+              h5{
+                  font-size: 16px;
+                  color: #a0a0a0;
+              }
+              p{
+                  font-family: 'Lato', sans-serif;
+              }
+              table,td,th{
+                  border: 1px #f2f2f2;
+                  text-align: left;
+                  font-family: 'Lato', sans-serif;
+                  padding: 5px;
+              }
+              table{
+                  width: 25%;
+              }
+              tbody>tr>:nth-child(1),th{
+                  font-family: 'Montserrat', sans-serif;
+                  /*background: #f2f2f2;
+                  text-align: left;*/
+              }
+            .buttons {
+                height: 40px;
+                background-color: white;
+                border-color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 800;
+                cursor: pointer;
+                margin:0px;
+                border-style: solid;
+                border-bottom-color: darkgrey;
+                border-bottom-width: 3px;
+                display: block;
+                width: 200px;
+            }
+            .buttons:hover {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .buttons:active {
+                border-bottom-width: 3px;
+                border-bottom-color: #4863de;
+            }
+            .tabs{
+                width: 100%;
+            }
+            .Content {
+                width: 97.5%;
+                padding: 15px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: white;
+                border-radius: 10px;
+                border-color: rgba(4,12,119,0);
+                align-items: center;
+                min-height: 450px;
+                float: right;
+          }
+          h1 {
+                position: absolute;
+                font-size: 50px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                padding-top: 0px;
+                margin-top: 10px;
+          }
+          img {
+              margin:10px;
+              height: 130px;
+              width: 130px;
+              margin-right: 20px;
+              border-radius: 10px;
+          }
+          .entry {
+              margin: 10px;
+              font-family: sans-serif;
+              border-style: solid;
+              border-width: 2px;
+              border-color: black;
+              border-radius: 10px;
+              margin-left: 250px;
+              min-height: 150px;
+          }
+
+          .NAV{
+              float: left;
+              background-color: white;
+              margin-left: 10px;
+          }
+          .right{
+              float: right;
+              padding-top: 25px;
+              padding-right: 50px;
+              color: gray;
+              width: 300px;
+          }
+          .right-portfolio{
+              float: right;
+              padding-right: 50px;
+              color: gray;
+              padding-top: 50px;
+          }
+          .left{
+              float: left;
+              padding-top: 50px;
+          }
+          #card {
+              float: left;
+              padding-top: 25px;
+              font-size: 100px;
+              padding-right: 25px;
+              padding-left: 10px;
+          }
+          .topnav2 {
+              overflow: hidden;
+              font-family: 'Montserrat', sans-serif;
+              border-radius: 10px;
+              float: left;
+              padding-top: 35px;
+              text-align:start;
+          }
+          .topnav2 a {
+              float: left;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px 20px;
+              text-decoration: none;
+              font-size: 20px;
+              border-radius: 10px;
+              margin-right: 5px;
+              margin-bottom: 10px;
+              font-weight: 550;
+          }
+
+          .topnav2 a:hover {
+              background-color: #3C589C;
+              color: white;
+              border-radius: 10px;
+          }
+      </style>
+  </head>
+  <body>
+      <h1 style = "float:left;"><i class="fas fa-layer-group"></i> StockPro</h1>
+      <br>
+      <br>
+      <br>
+      <section class="navigation2">
+          <div class="topnav2">
+              <a href="{% url 'dbmshome' %}">Home</a>
+              <a href="{% url 'home' %}">Analysis</a>
+              <a href="{% url 'CustomerSupport' %}">Contact</a>
+          </div>
+      </section>
+
+      <section class="navigation">
+          <div class="topnav">
+              <a href="{% url 'signin' %}">Sign Out</a>
+          </div>
+      </section>
+
+      <div class = "Content">
+          <div class = "NAV">
+              <form action="{% url 'watchlist' %}">
+                  {% csrf_token %}
+                  <input type="submit" class = "buttons" value="Edit Shares Watched">
+                  <input type="submit" class = "buttons" value="View Shares Watched" formaction="{% url "printwatchlist" %}">
+                  <input type="submit" class = "buttons" value="Buy Shares" formaction="{% url 'buy' %}">
+                  <input type="submit" class = "buttons" value="Sell Shares" formaction="{% url 'sell' %}">
+                  <input type="submit" class = "buttons" value="View Transactions" formaction="{% url 'viewtransaction' %}">
+                  <input type="submit" class = "buttons" value="View Portfolio" formaction="{% url 'viewportfolio' %}">
+                  <input type="submit" class = "buttons" value="View Cards" formaction="{% url 'viewcards' %}">
+                  <input type="submit" class = "buttons" value="Add Recurring order" formaction="{% url 'recurring' %}">
+                  <input type="submit" class = "buttons" value="View Recurring orders" formaction="{% url 'viewrecurringorder' %}">
+              </form>
+          </div>
+          <br>
+          <h3 style="margin-left: 250px">{{ Title }}</h3>
+          <section id="transaction"></section>
+          <h3 style="margin-left: 250px">{{ Title2 }}</h3>
+          <section id="portfolio"></section>
+          <h3 style="margin-left: 250px">{{ Title3 }}</h3>
+          <section id="cards"></section>
+          <h3 style="margin-left: 250px">{{ Title4 }}</h3>
+          <section id="recurring"></section>
+          <h3 style="margin-left: 250px">{{ str3 }}</h3>
+          <section id="watchlist"></section>
+      </div>
+      <br>
+  </body>
+  <script>
+    var transactions = {{ ans|safe|default:"[]" }};
+    var text = '';
+    var i;
+    for (i = 0; i < transactions.length; i++) {
+        text += '<div class = "entry">';
+        text += '<img src='+transactions[i][7]+' alt="Company_logo" align="left" height="50" width="50" >';
+
+        text += '<div class = "left"><h3>' + transactions[i][2] + '</h3>';
+        text += '<h4>Value: &#8377 '+transactions[i][6]+'</h4></div>';
+
+        text += '<div class = "right"><h4>Date: '+transactions[i][4]+'</h4>';
+        text += '<h4>Quantity: '+transactions[i][3]+'</h4>';
+        text += '<h4>Type: '+transactions[i][5]+'</h4>';
+        text += '<h4>Transaction ID: '+transactions[i][0]+'</h4></div>';
+
+            text +="</div>";
+    }
+
+    var recurring = {{ aans|safe|default:"[]" }};
+    var text2 = '';
+    var i;
+      for (i = 0; i < recurring.length; i++) {
+          text2 += '<div class = "entry">'
+          text2 += '<img src='+recurring[i][6]+' alt="Company_logo" align="left" height="50" width="50" >';
+          text2 += '<div class = "left"><h3>' + recurring[i][3] + '</h3>';
+          text2 += '<h4>Date: '+recurring[i][2]+'</h4></div>';
+          text2 += '<div class = "right"><h4>Quantity: '+recurring[i][5]+'</h4>';
+          text2 += '<h4>Type: '+recurring[i][4]+'</h4>';
+          text2 += '<h4>Order ID: '+recurring[i][0]+'</h4></div>';
+          text2 +="</div>";
+    }
+
+    var watchlist = {{ table|safe|default:"[]" }};
+    var text3 = '';
+    var i;
+      for (i = 0; i < watchlist.length; i++) {
+          text3 += '<div class = "entry">'
+          text3 += '<img src='+watchlist[i][2]+' alt="Company_logo" align="left" height="50" width="50" >';
+          text3 += '<div class = "left"><h3>' + watchlist[i][1] + '</h3></div>';
+          text3 +="</div>";
+    }
+
+    var cards = {{ ans3|safe|default:"[]" }};
+    var text4 = '';
+    var i;
+      for (i = 0; i < cards.length; i++) {
+          text4 += '<div class = "entry">'
+          text4 += '<i class="far fa-credit-card" id = "card"></i>'
+          text4 += '<div class = "left"><h3>' + cards[i][0] + '</h3></div>';
+          text4 += '<div class = "right"><h4>Name on card: '+cards[i][1]+'</h4>';
+          text4 += '<h4>Provider: '+cards[i][3]+'</h4>';
+          text4 += '<h4>Expiry: '+cards[i][2]+'</h4></div>';
+          text4 +="</div>";
+    }
+
+    var portfolio = {{ ans2|safe|default:"[]" }};
+    var text5 = '';
+    var i;
+      for (i = 0; i < portfolio.length; i++) {
+          text5 += '<div class = "entry">'
+          text5 += '<img src='+portfolio[i][3]+' alt="Company_logo" align="left" height="50" width="50" >';
+          text5 += '<div class = "left"><h3>' + portfolio[i][1] + '</h3></div>';
+          text5 += '<div class = "right-portfolio"><h4>Quantity: '+portfolio[i][2]+'</h4></div>';
+          text5 +="</div>";
+    }
+
+    document.getElementById("transaction").innerHTML = text;
+    document.getElementById("recurring").innerHTML = text2;
+    document.getElementById("watchlist").innerHTML = text3;
+    document.getElementById("cards").innerHTML = text4;
+    document.getElementById("portfolio").innerHTML = text5;
+  </script>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h4>Enter stock to be added to the watchlist</h4>
+  <form action="{% url 'payment' %}">
+      <input type="Enter Card which U want to use for payment" name="UsedCardNo">
+      {% csrf_token %}
+      <br>
+      <br>
+      <input type="submit" value="Payment" formaction="{% url 'deletewatchlist' %}">
+  </form>
+  </body>
+</html>
