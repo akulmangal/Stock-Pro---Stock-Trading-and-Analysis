@@ -25,31 +25,19 @@ The users of this system include any individual above 18 years of age who has a 
 Number
 
 # Features: 
-• User can buy/sell stocks according to live NSE prices which are displayed on the platform. 
-• User can view all the stock transactions placed on our platform neatly in one place. 
-• Users can view their portfolio very conveniently and in a consolidated manner which can help 
-them in their decision making. 
-• Users have the unique option of making payment through credit cards. 
-• Users can place recurring order of any stock for a particular date in advance. 
-• Users can target a few shares and add them to the watchlist giving them a convenient way of 
-tracking their favorite share’s prices. 
-• If any issues arise, users can easily contact the customer support through the customer support 
-option on the Stock Pro platform. 
+User can buy/sell stocks according to live NSE prices which are displayed on the platform. 
+User can view all the stock transactions placed on our platform neatly in one place. 
+Users can view their portfolio very conveniently and in a consolidated manner which can help them in their decision making. 
+Users have the unique option of making payment through credit cards. 
+Users can place recurring order of any stock for a particular date in advance. 
+Users can target a few shares and add them to the watchlist giving them a convenient way of tracking their favorite share’s prices. 
+If any issues arise, users can easily contact the customer support through the customer support option on the Stock Pro platform. 
  
-Our Trading platforms also come bundled with other unique services, such as:  
-• Stock quotes in real-time 
-Platform is connected to the Yahoo Finance API which enables us to get real time stock prices. 
-• Company description 
- 
-Our Platform provides a brief company description of each stock the user views.  
-• Real time stock parameters 
-The platform provides real time stock parameters such as day high/low, PE ratio etc. 
-• Charting software for stocks 
-The platform provides various types of graphs and charts like 5-,8-,13- and 30 day Simple 
-Moving Average, candle stick charts etc. 
-• Future price prediction of stocks 
-Using a machine learning model, our platform can predict stock prices in the near future 
-making it easy for users to make decisions. 
-• Premium analysis of a particular stock 
-Using another machine learning model, our platform provides the confidence score for any 
-stock listed in the NSE helping our user to make buy/sell calls. 
+Our Trading platforms also come bundled with other unique services, such as: 
+
+Stock quotes in real-time - Platform is connected to the Yahoo Finance API which enables us to get real time stock prices. 
+Company description - Our Platform provides a brief company description of each stock the user views.  
+Real time stock parameters - The platform provides real time stock parameters such as day high/low, PE ratio etc. 
+Charting software for stocks - The platform provides various types of graphs and charts like 5-,8-,13- and 30 day Simple Moving Average, candle stick charts etc. 
+Future price prediction of stocks - Using a machine learning model, our platform can predict stock prices in the near future making it easy for users to make decisions. 
+Premium analysis of a particular stock - Using another machine learning model, our platform provides the confidence score for any stock listed in the NSE helping our user to make buy/sell calls. 
